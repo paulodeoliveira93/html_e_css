@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/favicon/icone-coração-favicon.png" type="image/x-icon">
+    <title>Trabalhando com imagens dinâmicas</title>
+</head>
+<body>
+    <h1>Imagens dinâmicas</h1>
+
+    <h2>Presta atençõa nas imagens</h2>
+    <p>Veja como as imagens se ajustam de acordo com o tamaho da tela</p>
+    <picture>
+        <source media="(max-width: 550px)" srcset="imagens/foto-p300.png" type="image/png">
+        <source media="(max-width: 850px)" srcset="imagens/foto-m500.png" type="image/png">
+        <img src="imagens/foto-g800.png" alt="FotoTamahoG">
+    </picture>
+    <p>Esse ajuste de tela automático é possivel porque em vez de colocarmos a tag <em>img</em> <br>
+         colocamos a tag <em>picture</em>. <br>
+        Dentro da tag <em>picture</em> temos que colocar 3 imagens diferentes:
+    <ul>
+        <li>Imagem grande</li>
+        <li>Imagem média</li>
+        <li>Imagem pequena</li>
+    </ul>
+    <strong>OBS: Esses tamanhos são opicionais, vc pode colocar quantas imagens quiser. Coloquei 3 <br>
+    para seguir um padrão de <em>G, M e P</em>.</strong></p>
+
+    <h3>Algumas observações sobre a tag <em>picture</em></h3>
+    <p>Devemos colocar a imagem do menor para o maior e a última imagem que vc for colocar use a tag <em>img</em> <br>
+        Outra coisa que é importante deixar registrado aqui é que quando colocamos a tag <em>picture</em> <br>
+     ela sugere outras 3 tag que vc precisar prestar atenção em alguns detalhes.
+    <ol type="1">
+        <li><strong>media</strong> <dd>Aqui vc vai dizer o tamanho da imagem. Coloque max-width e o tamanho máximo da imagem <br>
+        <em>Lembrando que deve colocar do menor para o maior.</em></dd></li>
+        <li><strong>srcset</strong> <dd>Aqui vai ser a origem da imagem. Escolha a imagem. <em>Da menor para a maior.</em></dd></li>
+        <li><strong>type</strong> <dd>Aqui vc vai colocar: <em>image/formado da imagen</em>. <br>
+            Se o formato da imagem for png, coloca png. Se jpeg coloca jpeg e assim sucessivamente. </dd></li>
+    </ol></p>
+    <h2>Mais um exercício para fixação!!</h2>
+    <p>Vou colocar mais uma imagem só para fixação do exercício. Olhe a imagem a seguir:</p>
+    <picture>
+        <source media="(max-width: 550px)" srcset="imagens/foto-praia-p.png" type="image/png">
+        <source media="(max-width: 850px)" srcset="imagens/foto-praia-m.png" type="image/png">
+        <img src="imagens/foto-praia-g.png" alt="foto-praia-g">
+    </picture>
+    <p>Que legal, esta imagem também ficou dinâmica. <br>
+    Agora vamos para o próximo passo!!!!</p>
+
+    <h2>Áudio em html5</h2>
+    <p>Agora vamos colocar áudios no html.</p>
+    <audio preload="metadata" controls autoplay>
+        <source src="media/Icelandic Arpeggios - DivKid.mp3" type="audio/mpeg">
+        <source src="media/Icelandic Arpeggios - DivKid.ogg" type="audio/ogg">
+        <source src="media/Icelandic Arpeggios - DivKid.wav" type="audio/wav">
+        <p>Infelizmente o seu navegador não consegue reproduzir o áudio. <br>
+        <a href="media/guanacast-33.mp3">Click aqui e baixe o arquivo</a></p>
+    </audio> 
+    <p>Desse jeito, colocamos uma audio no nosso codigo html</p>
+
+    <h3>Alguns detalhes para ficar atento</h3>
+    <p>A tag que usamos para colocar áudio é a tag <em>audio</em>. <br>
+    Essa tag automáticamente preench outra tag que é a <em>src</em>, porém não vamos usar essa tag. <br>
+    Apague essa tag e coloque a tag <strong>souce src type</strong>.</p>
+    <p>Mas uma coisa que devemos nos atentar é que não é todos os navegadores que carregam os áudios. <br>
+    São 3 principais formados de áudio.</p>
+    <ul>
+        <li>Formado em mp3 - mpeg</li>
+        <li>Formado em ogg - ogg</li>
+        <li>Formado em wav - wav</li>
+        <p>Voce precisa colocar esses 3 formados no seu código html <br>
+        Caso o navegador do usuário não consiga abrir o áudio, você deverá disponibilizar o áudio para baixar com a <em>tag a</em>.</p>
+    </ul>
+    
+</body>
+</html>
